@@ -21,6 +21,7 @@ public NameHandler (){
      */
     public String getName() {
         return name;
+        // test comment for domenic
     }
 
     /**
