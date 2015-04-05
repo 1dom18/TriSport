@@ -4,7 +4,7 @@
  */
 
 package org.mypackage.hello;
-///hi
+///hi This is a test from domenic
 
 /**
  *
@@ -12,6 +12,12 @@ package org.mypackage.hello;
  */
 public class NameHandler {
 private String name;
+private String password;
+private String username;
+private String address;
+private String city;
+private String email;
+private int CCN;
 public NameHandler (){
     name = null;
 }

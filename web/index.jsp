@@ -11,15 +11,21 @@
 <html>
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Register Your New Account</title>
     </head>
     <body>
-        <h1>Entry Form  asdffdaasdf</h1>
+        <h1>Register Your New Account</h1>
 
         <form name="Name Action Form" action="response.jsp">
             Enter your name:
             <input type="text" name="name" value="" />
-            <input type="submit" value="OK" />
+            <br>Your Desired username: <input type="text" name="username" value="" />
+            <br>Your Desired password: <input type="password" name="password" value="" />
+            <br>Your address: <input type="text" name="address" value="" />
+            <br>Your city <input type="text" name="city" value="" />
+            <br>Your email: <input type="text" name="email" value="" />
+            <br>Your credit card number: <input type="text" name="CCN" value="" />
+            <br><input type="submit" value="OK" />
         </form>
     </body>
 </html>
