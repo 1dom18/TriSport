@@ -100,4 +100,20 @@ stmt.executeUpdate(Query);
 		System.out.println("Connection disconnected.");
 	}
     }
+    
+    public void SetRegister()
+    {
+        try
+        {
+        Statement stmt = con.createStatement();
+        String Query = "INSERT INTO customer(username, password, first_lastname, address, city, email,CCN) VALUES ('johnsons', 2, 1, 20000, 'Architect', 'pname','53532')";
+        stmt.executeUpdate(Query);
+        }
+        catch(Exception e)
+   	{
+    	System.out.println("General Exception:"+e.getMessage());
+        System.out.println("2");
+	con=null;
+	}    
+    }
 }
