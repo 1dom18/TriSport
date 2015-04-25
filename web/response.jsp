@@ -19,10 +19,17 @@
         <jsp:setProperty name="mybean" property="CCN" />
         <jsp:setProperty name="mybean" property="username" />
         <jsp:setProperty name="mybean" property="con" />
-        <sql:update var="customer" dataSource="jdbc/TriSportstuff">
-            INSERT INTO customer(username, password, first_lastname, address, city, email,CCN)
-            VALUES (<jsp:getProperty name="mybean" property="username" />,<jsp:getProperty name="mybean" property="password" />,<jsp:getProperty name="mybean" property="name" />,<jsp:getProperty name="mybean" property="address" />,<jsp:getProperty name="mybean" property="zip" />,<jsp:getProperty name="mybean" property="email" />,<jsp:getProperty name="mybean" property="CCN" />)
+        <sql:setDataSource  var="co"   driver="com.mysql.jdbc.Driver" 
+        url="jdbc:mysql://localhost:3306/trisport?zeroDateTimeBehavior=convertToNull"
+        user="root"
+        password="password"
+         />
+        <sql:update var="res" dataSource="${co}">
+            INSERT INTO customer(username, password, first_lastname, address,email,CCN,zip)
+            VALUES ('<jsp:getProperty name="mybean" property="username" />','<jsp:getProperty name="mybean" property="password" />','<jsp:getProperty name="mybean" property="name" />','<jsp:getProperty name="mybean" property="address" />','<jsp:getProperty name="mybean" property="email" />',<jsp:getProperty name="mybean" property="CCN" />,<jsp:getProperty name="mybean" property="zip" />)
         </sql:update>
+            
+            
         <h1>Hello, <jsp:getProperty name="mybean" property="name" />!</h1>
         <p>
     </body>
