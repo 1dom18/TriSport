@@ -22,7 +22,7 @@
             <br>Your Desired username: <input type="text" name="username" value="" />
             <br>Your Desired password: <input type="password" name="password" value="" />
             <br>Your address: <input type="text" name="address" value="" />
-            <br>Your city <input type="text" name="city" value="" />
+            <br>Your zip code <input type="text" name="zip" value="" />
             <br>Your email: <input type="text" name="email" value="" />
             <br>Your credit card number: <input type="text" name="CCN" value="" />
             <br><input type="submit" value="OK" />
